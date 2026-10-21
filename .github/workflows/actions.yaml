@@ -1,0 +1,17 @@
+name: python geminiImageGen.py
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+        
+      - name: execute py script # run main.py
+        run: python geminiImageGen.py
+
