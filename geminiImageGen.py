@@ -6,10 +6,8 @@ import smtplib, ssl, base64, json
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-users = [{'name' : 'gabe',
-'email' : 'g_kell87@yahoo.com'},
-        {'name' : 'marce',
-         'email' : 'marcellakirkland@yahoo.com'}]
+users = [{'name' : '',
+'email' : ''}]
 
 line1 = 'A motivational poster in a slightly cartoonish style with the person in the reference pictures doing something amazing.'
 line2 = 'Randomly pick something like climbing a mountain, running a marathon, boxing, baking a big cake, cooking an amazing meal'
@@ -22,7 +20,7 @@ aspect_ratio = "5:4" # "1:1","2:3","3:2","3:4","4:3","4:5","5:4","9:16","16:9","
 resolution = "2K" # "1K", "2K", "4K"
 
 for user in users:
-    client = genai.Client(api_key = 'AIzaSyBjW440Ar3RpQ9vL05_wsHpiIaD9HO295g')
+    client = genai.Client(api_key = '')
     response = client.models.generate_content(
         model="gemini-3-pro-image-preview",
         contents=[
