@@ -45,7 +45,7 @@ for user in users:
             encoded_image = base64.b64encode(image.image_bytes).decode('utf-8')
             data_uri = f'data:image/png;base64,{encoded_image}'
 
-    sender_email = "g.kell0387@gmail.com"
+    sender_email = ""
     receiver_email = user['email']
     password = "fdjw cqqb osou xwci"
     
